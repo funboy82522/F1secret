@@ -1,9 +1,43 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+// Handle user input and generate AI responses
+document.getElementById('send-button').addEventListener('click', function() {
+    const userInput = document.getElementById('user-input').value;
+    if (userInput.trim()) {
+        // Display user input
+        const userMessage = document.createElement('p');
+        userMessage.textContent = "You: " + userInput;
+        document.getElementById('chat-log').appendChild(userMessage);
+        
+        // Generate AI response
+        const botResponse = generateBotResponse(userInput);
+        
+        // Display bot response
+        const botMessage = document.createElement('p');
+        botMessage.textContent = "AI: " + botResponse;
+        document.getElementById('chat-log').appendChild(botMessage);
+        
+        // Scroll to the latest message
+        document.getElementById('chat-log').scrollTop = document.getElementById('chat-log').scrollHeight;
 
-\f0\fs24 \cf0 words\
+        // Clear input field
+        document.getElementById('user-input').value = '';
+    }
+});
+
+// Simple AI responses
+function generateBotResponse(input) {
+    const lowercaseInput = input.toLowerCase();
+    
+    if (lowercaseInput.includes("hello") || lowercaseInput.includes("hi")) {
+        return "Hello! How can I help you today?";
+    } else if (lowercaseInput.includes("game")) {
+        return "Nice! What game are you playing?";
+    } else if (lowercaseInput.includes("favorite")) {
+        return "I love all kinds of games! What about you?";
+    } else if (lowercaseInput.includes("help")) {
+        return "I am here to assist you! What do you need help with?";
+    } else if (lowercaseInput.includes("goodbye")) {
+        return "Goodbye! Talk to you later!";
+    } else {
+        return "I’m not sure how to respond to that. Can you ask something else?";
+    }
 }

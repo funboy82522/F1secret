@@ -1,37 +1,16 @@
 /* Global Styles */
 body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
-    margin-top: 200px;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(
-        45deg, 
-        #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, 
-        #ff1493, #00ffff, #ff4500, #8a2be2, #20b2aa, #ff6347
-    );
-    background-size: 1000% 1000%;
-    animation: rainbowBackground 10s linear infinite;
+    background-color: #f1f1f1;
 }
 
-
-/* Background animation for the rainbow effect */
-@keyframes rainbowBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-/* Container for main content */
+/* Main Container */
 .container {
     text-align: center;
     width: 100%;
@@ -42,118 +21,62 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Header Styles */
-h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #007BFF;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Chatbox */
+#chat-box {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Button Container Layout */
-.button-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-    margin-top: 20px;
+#chat-log {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    border-bottom: 2px solid #ddd;
 }
 
-
-/* Link Style to Expand to Full Width */
-.button-container a {
-    display: block;
-    width: 200%;
+#chat-log p {
+    margin: 5px;
+    padding: 5px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
 }
 
+/* User Input Area */
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
 
-/* Button Styling */
-button {
-    padding: 20px 40px;
-    font-size: 20px;
-    background-color: transparent;
-    color: #007BFF; /* Button color before hover */
+#send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
-    min-width: 180px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Button Hover Effect */
-button:hover {
-    animation: colorTransition 3s linear infinite; /* Color transition animation */
-    transform: scale(1.05);
-    color: #fff;
-    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.6);
+#send-button:hover {
+    background-color: #0056b3;
 }
 
-
-/* Color Transition Animation */
-@keyframes colorTransition {
-    0% {
-        background-color: #b2ffb2; /* Light green */
-    }
-    50% {
-        background-color: #0047ab; /* Dark blue */
-    }
-    100% {
-        background-color: #b2ffb2; /* Return to light green */
-    }
+/* Button Links Container */
+.button-container {
+    margin-top: 20px;
 }
 
-
-/* Rocking Animation */
-@keyframes rocking {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-3deg);
-    }
-    50% {
-        transform: rotate(3deg);
-    }
-    75% {
-        transform: rotate(-3deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.button-container a {
+    display: inline-block;
+    margin: 10px;
 }
-
-
-/* Sparkle Effect Animation */
-@keyframes sparkle {
-    from {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-    }
-}
-
-
-/* Responsive Layout Adjustments */
-@media (max-width: 600px) {
-    .button-container {
-        grid-template-columns: 1fr;
-    }
-    h1 {
-        font-size: 36px;
-    }
-    button {
-        font-size: 18px;
-        padding: 15px 30px;
-    }
-}
-
-
-
-

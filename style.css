@@ -19,6 +19,28 @@ body {
 /* Background animation for the rainbow effect */
 @keyframes rainbowBackground {
     0% {
+/* Global Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 200px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        45deg, 
+        #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, 
+        #ff1493, #00ffff, #ff4500, #8a2be2, #20b2aa, #ff6347
+    );
+    background-size: 1000% 1000%;
+    animation: rainbowBackground 10s linear infinite;
+}
+
+
+/* Background animation for the rainbow effect */
+@keyframes rainbowBackground {
+    0% {
         background-position: 0% 50%;
     }
     50% {
@@ -28,6 +50,7 @@ body {
         background-position: 0% 50%;
     }
 }
+
 
 /* Container for main content */
 .container {
@@ -40,6 +63,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 /* Header Styles */
 h1 {
     font-size: 48px;
@@ -50,6 +74,7 @@ h1 {
     letter-spacing: 2px;
 }
 
+
 /* Button Container Layout */
 .button-container {
     display: grid;
@@ -59,11 +84,13 @@ h1 {
     margin-top: 20px;
 }
 
+
 /* Link Style to Expand to Full Width */
 .button-container a {
     display: block;
     width: 200%;
 }
+
 
 /* Button Styling */
 button {
@@ -79,6 +106,7 @@ button {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
+
 /* Button Hover Effect */
 button:hover {
     animation: colorTransition 3s linear infinite; /* Color transition animation */
@@ -86,6 +114,7 @@ button:hover {
     color: #fff;
     box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.6);
 }
+
 
 /* Color Transition Animation */
 @keyframes colorTransition {
@@ -99,6 +128,7 @@ button:hover {
         background-color: #b2ffb2; /* Return to light green */
     }
 }
+
 
 /* Rocking Animation */
 @keyframes rocking {
@@ -119,6 +149,7 @@ button:hover {
     }
 }
 
+
 /* Sparkle Effect Animation */
 @keyframes sparkle {
     from {
@@ -128,6 +159,7 @@ button:hover {
         box-shadow: 0 0 20px rgba(255, 255, 255, 1);
     }
 }
+
 
 /* Responsive Layout Adjustments */
 @media (max-width: 600px) {
@@ -142,3 +174,10 @@ button:hover {
         padding: 15px 30px;
     }
 }
+
+
+
+
+
+
+

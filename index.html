@@ -10,43 +10,43 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Adjust to prevent content going off the page */
+            align-items: flex-start;
             min-height: 100vh;
             margin: 0;
-            background-color: #f4f4f4; /* Optional: background color */
-            padding-top: 20px; /* Added padding to give space from the top */
-            padding-left: 100px; /* Ensure there's some space on the left */
-            padding-right: 10px; /* Ensure there's some space on the right */
+            background-color: #f4f4f4;
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 10px;
         }
 
         /* Main container styling */
         .container {
             text-align: center;
             padding: 20px;
-            background-color: #333; /* Dark grey background */
-            border-radius: 10px; /* Optional: rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-            width: 100%; /* Make the container take full width */
-            max-width: 1200px; /* Limit the width to avoid stretching */
-            box-sizing: border-box; /* Ensures padding doesn't make the container overflow */
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
         }
 
         h1 {
             font-size: 36px;
-            margin-bottom: 20px; /* Space between title and buttons */
-            background-image: linear-gradient(to right, red, white, blue); /* Red, White, Blue gradient */
-            -webkit-background-clip: text; /* Makes the gradient clip to the text */
-            color: transparent; /* Makes the text color transparent to show gradient */
+            margin-bottom: 20px;
+            background-image: linear-gradient(to right, red, white, blue);
+            -webkit-background-clip: text;
+            color: transparent;
             font-weight: bold;
         }
 
         /* Add some padding between the buttons */
         .button-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns */
-            gap: 15px; /* Space between buttons */
-            justify-items: center; /* Center buttons within each column */
-            align-items: center; /* Center buttons vertically in the grid cells */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            justify-items: center;
+            align-items: center;
         }
 
         button {
@@ -54,7 +54,7 @@
             padding: 12px;
             font-size: 16px;
             cursor: pointer;
-            background-color: #007bff; /* Blue color */
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -62,13 +62,13 @@
         }
 
         button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
         }
 
         /* For smaller screens, we switch to a single column layout */
         @media (max-width: 768px) {
             .button-container {
-                grid-template-columns: 1fr; /* Stack buttons in one column */
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -80,45 +80,45 @@
 
         <!-- Button Links -->
         <div class="button-container">
-            <a href="https://tylerpalko.github.io/gamehub/minecraft1.5.2/" target="_blank"><button>Minecraft</button></a>
-            <a href="https://tylerpalko.github.io/gamehub/retrobowl/" target="_blank"><button>Retro Bowl</button></a>
-            <a href="https://tylerpalko.github.io/gamehub/factoryballsforever/" target="_blank"><button>Factory Balls Forever</button></a>
-            <a href="https://tylerpalko.github.io/gamehub/ovo/" target="_blank"><button>OVO</button></a>
-            <a href="https://soundboardguys.com/" target="_blank"><button>Soundboard</button></a>
-            <a href="https://tylerpalko.github.io/gamehub/breaklock/" target="_blank"><button>Breaklock</button></a>
-            <a href="https://cbgamesdev.github.io/chilibowlflash/ib.html" target="_blank"><button>Interactive Buddy</button></a>
-            <a href="https://ad-freegames.github.io/flash/unfair-mario.html" target="_blank"><button>Unfair Mario</button></a>
-            <a href="https://cdn.i-ready.com/instruction/game-catstacker/1.6.x/2/" target="_blank"><button>Cat Stacker</button></a>
-            <a href="https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-minedigger/" target="_blank"><button>Dig Site</button></a>
-            <a href="https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-lanerunner/" target="_blank"><button>Galaxy Sprint</button></a>
-            <a href="https://ad-freegames.github.io/flash/whack-your-boss.html" target="_blank"><button>Whack Your Boss</button></a>
-            <a href="https://launchball.sciencemuseum.org.uk/" target="_blank"><button>Launch Ball</button></a>
-            <a href="https://chrome-dino-game.github.io/" target="_blank"><button>Chrome Dino Game</button></a>
-            <a href="https://masonicgit.github.io/pacman/" target="_blank"><button>Pacman</button></a>
-            <a href="https://julianyaman.github.io/bitcoin-clicker/index.html" target="_blank"><button>Bitcoin Clicker</button></a>
-            <a href="https://ellisonleao.github.io/clumsy-bird/" target="_blank"><button>Clumsy Bird</button></a>
-            <a href="https://ad-freegames.github.io/flash/bloons-tower-defense.html" target="_blank"><button>Bloons Tower Defense</button></a>
-            <a href="https://ad-freegames.github.io/flash/learn-to-fly.html" target="_blank"><button>Learn to Fly</button></a>
-            <a href="https://sussygamedeveloper.github.io/FNAF1/" target="_blank"><button>Fnaf 1</button></a>
-            <a href="https://sussygamedeveloper.github.io/FNAF2/" target="_blank"><button>Fnaf 2</button></a>
-            <a href="https://sussygamedeveloper.github.io/fnaf3/" target="_blank"><button>Fnaf 3</button></a>
-            <a href="https://ad-freegames.github.io/google-doodle/snake.html" target="_blank"><button>Google Snake</button></a>
-            <a href="https://ad-freegames.github.io/yandex/azerion/fireboy-and-watergirl.html" target="_blank"><button>Fireboy and Watergirl</button></a>
-            <a href="https://ad-freegames.github.io/snacks/hyper-snake.html" target="_blank"><button>Hyper Snake</button></a>
-            <a href="https://ad-freegames.github.io/snacks/stack-bounce.html" target="_blank"><button>Stack Bounce</button></a>
-            <a href="https://ad-freegames.github.io/4399/city-bike-stunt.html" target="_blank"><button>City Bike Stunt</button></a>
-            <a href="https://ad-freegames.github.io/4399/city-minibus-driver.html" target="_blank"><button>City Minibus Driver</button></a>
-            <a href="https://ad-freegames.github.io/4399/castle-defender-saga.html" target="_blank"><button>Castle Defender Saga</button></a>
-            <a href="https://ad-freegames.github.io/4399/cave-chaos.html" target="_blank"><button>Cave Chaos</button></a>
-            <a href="https://ad-freegames.github.io/4399/fly-car-stunt.html" target="_blank"><button>Fly Car Stunt</button></a>
-            <a href="https://ad-freegames.github.io/4399/drift-torque.html" target="_blank"><button>Drift Torque</button></a>
-            <a href="https://ad-freegames.github.io/4399/funny-battle.html" target="_blank"><button>Funny Battle</button></a>
-            <a href="https://ad-freegames.github.io/4399/glitch-dash.html" target="_blank"><button>Glitch Dash</button></a>
-            <a href="https://ad-freegames.github.io/4399/sink-it.html" target="_blank"><button>Sink It</button></a>
-            <a href="https://ad-freegames.github.io/4399/top-guns.io.html" target="_blank"><button>Top Guns.io</button></a>
-            <a href="https://ad-freegames.github.io/vseigru/crab-and-fish.html" target="_blank"><button>Crab and Fish</button></a>
-            <a href="https://ad-freegames.github.io/famobi/3d-penalty.html" target="_blank"><button>3D Penalty</button></a>
-            <a href="https://ad-freegames.github.io/famobi/football.html" target="_blank"><button>Football</button></a>
+            <a href="https://tylerpalko.github.io/gamehub/minecraft1.5.2/" target="about:blank"><button>Minecraft</button></a>
+            <a href="https://tylerpalko.github.io/gamehub/retrobowl/" target="about:blank"><button>Retro Bowl</button></a>
+            <a href="https://tylerpalko.github.io/gamehub/factoryballsforever/" target="about:blank"><button>Factory Balls Forever</button></a>
+            <a href="https://tylerpalko.github.io/gamehub/ovo/" target="about:blank"><button>OVO</button></a>
+            <a href="https://soundboardguys.com/" target="about:blank"><button>Soundboard</button></a>
+            <a href="https://tylerpalko.github.io/gamehub/breaklock/" target="about:blank"><button>Breaklock</button></a>
+            <a href="https://cbgamesdev.github.io/chilibowlflash/ib.html" target="about:blank"><button>Interactive Buddy</button></a>
+            <a href="https://ad-freegames.github.io/flash/unfair-mario.html" target="about:blank"><button>Unfair Mario</button></a>
+            <a href="https://cdn.i-ready.com/instruction/game-catstacker/1.6.x/2/" target="about:blank"><button>Cat Stacker</button></a>
+            <a href="https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-minedigger/" target="about:blank"><button>Dig Site</button></a>
+            <a href="https://cdn.i-ready.com/instruction/reward-games/v1.3.x/2/game-lanerunner/" target="about:blank"><button>Galaxy Sprint</button></a>
+            <a href="https://ad-freegames.github.io/flash/whack-your-boss.html" target="about:blank"><button>Whack Your Boss</button></a>
+            <a href="https://launchball.sciencemuseum.org.uk/" target="about:blank"><button>Launch Ball</button></a>
+            <a href="https://chrome-dino-game.github.io/" target="about:blank"><button>Chrome Dino Game</button></a>
+            <a href="https://masonicgit.github.io/pacman/" target="about:blank"><button>Pacman</button></a>
+            <a href="https://julianyaman.github.io/bitcoin-clicker/index.html" target="about:blank"><button>Bitcoin Clicker</button></a>
+            <a href="https://ellisonleao.github.io/clumsy-bird/" target="about:blank"><button>Clumsy Bird</button></a>
+            <a href="https://ad-freegames.github.io/flash/bloons-tower-defense.html" target="about:blank"><button>Bloons Tower Defense</button></a>
+            <a href="https://ad-freegames.github.io/flash/learn-to-fly.html" target="about:blank"><button>Learn to Fly</button></a>
+            <a href="https://sussygamedeveloper.github.io/FNAF1/" target="about:blank"><button>Fnaf 1</button></a>
+            <a href="https://sussygamedeveloper.github.io/FNAF2/" target="about:blank"><button>Fnaf 2</button></a>
+            <a href="https://sussygamedeveloper.github.io/fnaf3/" target="about:blank"><button>Fnaf 3</button></a>
+            <a href="https://ad-freegames.github.io/google-doodle/snake.html" target="about:blank"><button>Google Snake</button></a>
+            <a href="https://ad-freegames.github.io/yandex/azerion/fireboy-and-watergirl.html" target="about:blank"><button>Fireboy and Watergirl</button></a>
+            <a href="https://ad-freegames.github.io/snacks/hyper-snake.html" target="about:blank"><button>Hyper Snake</button></a>
+            <a href="https://ad-freegames.github.io/snacks/stack-bounce.html" target="about:blank"><button>Stack Bounce</button></a>
+            <a href="https://ad-freegames.github.io/4399/city-bike-stunt.html" target="about:blank"><button>City Bike Stunt</button></a>
+            <a href="https://ad-freegames.github.io/4399/city-minibus-driver.html" target="about:blank"><button>City Minibus Driver</button></a>
+            <a href="https://ad-freegames.github.io/4399/castle-defender-saga.html" target="about:blank"><button>Castle Defender Saga</button></a>
+            <a href="https://ad-freegames.github.io/4399/cave-chaos.html" target="about:blank"><button>Cave Chaos</button></a>
+            <a href="https://ad-freegames.github.io/4399/fly-car-stunt.html" target="about:blank"><button>Fly Car Stunt</button></a>
+            <a href="https://ad-freegames.github.io/4399/drift-torque.html" target="about:blank"><button>Drift Torque</button></a>
+            <a href="https://ad-freegames.github.io/4399/funny-battle.html" target="about:blank"><button>Funny Battle</button></a>
+            <a href="https://ad-freegames.github.io/4399/glitch-dash.html" target="about:blank"><button>Glitch Dash</button></a>
+            <a href="https://ad-freegames.github.io/4399/sink-it.html" target="about:blank"><button>Sink It</button></a>
+            <a href="https://ad-freegames.github.io/4399/top-guns.io.html" target="about:blank"><button>Top Guns.io</button></a>
+            <a href="https://ad-freegames.github.io/vseigru/crab-and-fish.html" target="about:blank"><button>Crab and Fish</button></a>
+            <a href="https://ad-freegames.github.io/famobi/3d-penalty.html" target="about:blank"><button>3D Penalty</button></a>
+            <a href="https://ad-freegames.github.io/famobi/football.html" target="about:blank"><button>Football</button></a>
         </div>
     </div>
 </body>

@@ -5,7 +5,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin: 0;
+    margin-top: 200px;
     font-family: Arial, sans-serif;
     background: linear-gradient(
         45deg, 

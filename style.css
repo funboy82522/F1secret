@@ -5,27 +5,6 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    margin-top: 10px;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(
-        45deg, 
-        #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, 
-        #ff1493, #00ffff, #ff4500, #8a2be2, #20b2aa, #ff6347
-    );
-    background-size: 1000% 1000%;
-    animation: rainbowBackground 10s linear infinite;
-}
-
-/* Background animation for the rainbow effect */
-@keyframes rainbowBackground {
-    0% {
-/* Global Styles */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
     margin-top: 200px;
     font-family: Arial, sans-serif;
     background: linear-gradient(
@@ -36,7 +15,6 @@ body {
     background-size: 1000% 1000%;
     animation: rainbowBackground 10s linear infinite;
 }
-
 
 /* Background animation for the rainbow effect */
 @keyframes rainbowBackground {
@@ -51,7 +29,6 @@ body {
     }
 }
 
-
 /* Container for main content */
 .container {
     text-align: center;
@@ -63,7 +40,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 /* Header Styles */
 h1 {
     font-size: 48px;
@@ -74,7 +50,6 @@ h1 {
     letter-spacing: 2px;
 }
 
-
 /* Button Container Layout */
 .button-container {
     display: grid;
@@ -84,13 +59,11 @@ h1 {
     margin-top: 20px;
 }
 
-
 /* Link Style to Expand to Full Width */
 .button-container a {
     display: block;
     width: 200%;
 }
-
 
 /* Button Styling */
 button {
@@ -106,78 +79,21 @@ button {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Button Hover Effect */
 button:hover {
-    animation: colorTransition 3s linear infinite; /* Color transition animation */
-    transform: scale(1.05);
-    color: #fff;
-    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.6);
+Here’s the continuation of the CSS to complete the hover effect for buttons:
+
+```css
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.1);
+    background-color: #007BFF; /* Button hover background color */
+    color: #ffffff; /* Text color on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Color Transition Animation */
-@keyframes colorTransition {
-    0% {
-        background-color: #b2ffb2; /* Light green */
-    }
-    50% {
-        background-color: #0047ab; /* Dark blue */
-    }
-    100% {
-        background-color: #b2ffb2; /* Return to light green */
-    }
+/* Button Active Effect */
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-
-/* Rocking Animation */
-@keyframes rocking {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-3deg);
-    }
-    50% {
-        transform: rotate(3deg);
-    }
-    75% {
-        transform: rotate(-3deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-
-/* Sparkle Effect Animation */
-@keyframes sparkle {
-    from {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-    }
-}
-
-
-/* Responsive Layout Adjustments */
-@media (max-width: 600px) {
-    .button-container {
-        grid-template-columns: 1fr;
-    }
-    h1 {
-        font-size: 36px;
-    }
-    button {
-        font-size: 18px;
-        padding: 15px 30px;
-    }
-}
-
-
-
-
-
-
-

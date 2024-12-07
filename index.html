@@ -5,6 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Center the content vertically and horizontally */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Optional: change background color */
+        }
+
+        /* Main container styling */
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Added margin to give space from the top */
+            padding: 20px;
+            background-color: #fff; /* Optional: background for the container */
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px; /* Space between title and buttons */
+        }
+
+        /* Add some padding between the buttons */
+        .button-container a {
+            margin-bottom: 10px; /* Adjust the spacing between buttons */
+        }
+
+        button {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Center the buttons vertically and horizontally */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Main Content Wrapper -->

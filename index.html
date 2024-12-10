@@ -111,8 +111,8 @@
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="movies.html">movies</a>
-        <a href="tools.html">tools</a>
+        <a href="movies.html">Movies</a>
+        <a href="tools.html">Tools</a>
     </nav>
 
     <h1>Welcome to the F1secret</h1>
@@ -124,7 +124,7 @@
 
     <div class="category">
         <div class="button-container" id="buttonContainer">
-            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -388,12 +388,11 @@
         }
 
         function openGame(url) {
-            // Open a blank page
+            // Open a blank window
             const newWindow = window.open("about:blank", "_blank");
-            // Redirect to the game URL after a slight delay
-            setTimeout(() => {
-                newWindow.location.href = url;
-            }, 100);
+            // Set iframe to load the game URL
+            newWindow.document.write("<html><body style='margin:0;'><iframe src='" + url + "' style='width:100%; height:100%; border:none;'></iframe></body></html>");
+            newWindow.document.close(); // Close the document to render the iframe
         }
     </script>
 

@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgba(255, 255, 100, 0.9);
+        }
+
+        /* Rainbow background animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%;
+            animation: rainbow 10s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            width: 300px;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            padding: 10px;
+            justify-items: center;
+        }
+
+        .game-button {
+            background: #222;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            width: 320px; /* Set a fixed width for button */
+        }
+
+        .game-button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .game-button:active {
+            transform: scale(1.05);
+        }
+
+        .category {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="movies.html">movies</a>
+        <a href="tools.html">tools</a>
+    </nav>
+
+    <h1>Welcome to the Games Website</h1>
+    <p>Select a game below to play:</p>
+
+    <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" onkeyup="filterGames()" placeholder="Search for games...">
+    </div>
+
+    <div class="category">
+        <div class="button-container" id="buttonContainer">
+            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
+            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
+            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
+            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/minijuegos/stickman-hook.html')">Stickman Hook</button>
+          
+
+        </div>
+    </div>
+
+    <script>
+        function filterGames() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const buttonContainer = document.getElementById('buttonContainer');
+            const buttons = buttonContainer.getElementsByClassName('game-button');
+
+            for (let i = 0; i < buttons.length; i++) {
+                const button = buttons[i];
+                if (button.innerText.toLowerCase().indexOf(filter) > -1) {
+                    button.style.display = '';
+                } else {
+                    button.style.display = 'none';
+                }
+            }
+        }
+
+        function openGame(url) {
+            // Open a blank page
+            const newWindow = window.open("about:blank", "_blank");
+            // Redirect to the game URL after a slight delay
+            setTimeout(() => {
+                newWindow.location.href = url;
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>

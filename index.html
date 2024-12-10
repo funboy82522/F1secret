@@ -56,11 +56,11 @@
         }
 
         .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             padding: 20px;
+            justify-items: center;
         }
 
         .game-button {
@@ -72,6 +72,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.3s;
+            width: 150px; /* Set a fixed width for button */
         }
 
         .game-button:hover {
@@ -340,8 +341,6 @@
             <button class="game-button" onclick="window.location.href='https://ad-freegames.github.io/4399/sink-it.html'">Sink It</button>
             <button class="game-button" onclick="window.location.href='https://ad-freegames.github.io/4399/top-guns.io.html'">Top Guns.io</button>
             <button class="game-button" onclick="window.location.href='https://ad-freegames.github.io/google-doodle/snake.html'">Google Doodle: Snake</button>
-            <button class="game-button" onclick="window.location.href='https://ad-freegames.github.io/yandex/azerion/fireboy-and-watergirl.html'">Fireboy and Watergirl</button>
-            <button class="game-button" onclick="window.location.href='https://ad-freegames.github.io/snacks/hyper-snake.html'">Hyper Snake</button>
         </div>
     </div>
 

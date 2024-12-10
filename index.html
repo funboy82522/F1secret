@@ -13,6 +13,25 @@
             overflow-x: hidden;
         }
 
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgba(255, 255, 100, 0.9);
+        }
+
         /* Rainbow background animation */
         body::before {
             content: '';
@@ -90,6 +109,12 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <h1>Welcome to the Games Website</h1>
     <p>Select a game below to play:</p>
 
@@ -99,7 +124,7 @@
 
     <div class="category">
         <div class="button-container" id="buttonContainer">
-            <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+<button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -341,6 +366,7 @@
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/sink-it.html')">Sink It</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/top-guns.io.html')">Top Guns.io</button>
             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/google-doodle/snake.html')">Google Doodle: Snake</button>
+
         </div>
     </div>
 

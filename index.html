@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games Website</title>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' rel='stylesheet'>
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             color: white;
             overflow-x: hidden;
@@ -20,23 +21,25 @@
             justify-content: center;
             background: rgba(0, 0, 0, 0.9);
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            border-radius: 8px; /* Rounded corners for navigation */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            margin: 20px 0;
         }
 
         nav a {
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
             color: white;
             font-size: 1.2rem;
             transition: color 0.3s, text-shadow 0.3s;
-            padding: 8px 16px;
-            border-radius: 5px; /* Rounded corners for links */
+            padding: 10px 15px;
+            border-radius: 5px;
         }
 
         nav a:hover {
             color: rgba(255, 255, 100, 1);
             text-shadow: 0 0 10px rgba(255, 255, 199, 0.7);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         body::before {
@@ -58,14 +61,21 @@
             100% { background-position: 0% 50%; }
         }
 
+        .container {
+            max-width: 1200px; /* Maximum width of the container */
+            margin: auto;
+            padding: 20px;
+        }
+
         h1 {
-            margin-top: 40px;
+            margin-top: 20px;
             font-size: 2.5rem;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
 
         p {
             font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         .search-container {
@@ -75,7 +85,7 @@
         .search-input {
             padding: 12px 20px;
             font-size: 1rem;
-            border-radius: 5px; /* Rounded corners for search input */
+            border-radius: 5px;
             border: 2px solid #fff;
             width: 280px;
             transition: border-color 0.3s;
@@ -88,32 +98,50 @@
 
         .button-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 30px; /* Increased space between buttons */
             margin: 20px 0;
             padding: 0 10px;
         }
 
         .game-button {
-            background: #444;
+            background: #3a3a3a;
             border: none;
             padding: 15px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: white;
-            border-radius: 10px; /* Rounded corners for buttons */
+            border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
-            width: 100%;
+            text-align: left;
+            position: relative; /* For after pseudo-element */
+            overflow: hidden;
         }
 
         .game-button:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .game-button:active {
             transform: scale(0.98);
+        }
+
+        .game-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.15); /* Subtle overlay effect on hover */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .game-button:hover::after {
+            opacity: 1; /* Show overlay on hover */
         }
 
         @media (max-width: 600px) {
@@ -135,15 +163,16 @@
         <a href="ABOUT.html">About</a>
     </nav>
 
-    <h1>Welcome to the F1secret</h1>
-    <p>Select a game below to play:</p>
+    <div class="container">
+        <h1>Welcome to the F1secret</h1>
+        <p>Select a game below to play:</p>
 
-    <div class="search-container">
-        <input type="text" class="search-input" id="searchInput" onkeyup="filterGames()" placeholder="Search for games...">
-    </div>
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" onkeyup="filterGames()" placeholder="Search for games...">
+        </div>
 
-    <div class="button-container" id="buttonContainer">
-           <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+        <div class="button-container" id="buttonContainer">
+              <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -383,6 +412,7 @@
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/sink-it.html')">Sink It</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/top-guns.io.html')">Top Guns.io</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/google-doodle/snake.html')">Google Doodle: Snake</button>
+        </div>
     </div>
 
     <script>
@@ -412,8 +442,6 @@
             newWindow.document.close(); // Close the document to render the iframe
         }
     </script>
-
 </body>
 </html>
-
 

@@ -50,7 +50,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(90deg, red, orange, green, blue, indigo, violet); /* Removed yellow */
+            background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
             background-size: 400% 400%;
             animation: rainbow 10s linear infinite;
         }
@@ -104,6 +104,13 @@
             padding: 0 10px;
         }
 
+        .button-background {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px;
+            padding: 20px; /* Padding around the buttons */
+            display: inline-block; /* Center the content */
+        }
+
         .game-button {
             background: #ffcc00; /* Bright yellow color for a vibrant look */
             border: none;
@@ -117,6 +124,7 @@
             position: relative; 
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
+            width: 100%; /* Full width to match the container */
         }
 
         .game-button:hover {
@@ -172,8 +180,9 @@
             <input type="text" class="search-input" id="searchInput" onkeyup="filterGames()" placeholder="Search for games...">
         </div>
 
-        <div class="button-container" id="buttonContainer">
-             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+        <div class="button-background"> <!-- This creates the transparent box behind the buttons -->
+            <div class="button-container" id="buttonContainer">
+               <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -413,6 +422,7 @@
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/sink-it.html')">Sink It</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/4399/top-guns.io.html')">Top Guns.io</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/google-doodle/snake.html')">Google Doodle: Snake</button>
+            </div>
         </div>
     </div>
 
@@ -445,3 +455,5 @@
     </script>
 </body>
 </html>
+
+

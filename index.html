@@ -98,7 +98,7 @@
 
         .button-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* Two buttons per column */
             gap: 30px;
             margin: 20px 0;
             padding: 0 10px;
@@ -112,11 +112,11 @@
         }
 
         .game-button {
-            background: #ffcc00; /* Bright yellow color for a vibrant look */
+            background: linear-gradient(90deg, #FF416C, #FF4B2B); /* Gradient background */
             border: none;
             padding: 15px;
             font-size: 1.1rem;
-            color: #333; /* Darker text for better contrast */
+            color: #fff; /* White text for contrast */
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
@@ -129,7 +129,7 @@
 
         .game-button:hover {
             transform: translateY(-2px);
-            background: #ffbb00; /* Darken on hover */
+            background: linear-gradient(90deg, #FF4B2B, #FF416C); /* Reverse gradient on hover */
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
 
@@ -161,6 +161,10 @@
             h1 {
                 font-size: 2rem;
             }
+
+            .button-container {
+                grid-template-columns: 1fr; /* Stack buttons in a single column on small screens */
+            }
         }
     </style>
 </head>
@@ -182,7 +186,7 @@
 
         <div class="button-background"> <!-- This creates the transparent box behind the buttons -->
             <div class="button-container" id="buttonContainer">
-               <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+                  <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -455,5 +459,3 @@
     </script>
 </body>
 </html>
-
-

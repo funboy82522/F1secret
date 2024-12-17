@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             color: white;
             overflow-x: hidden;
@@ -21,6 +21,7 @@
             background: rgba(0, 0, 0, 0.9);
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 8px; /* Rounded corners for navigation */
         }
 
         nav a {
@@ -29,6 +30,8 @@
             color: white;
             font-size: 1.2rem;
             transition: color 0.3s, text-shadow 0.3s;
+            padding: 8px 16px;
+            border-radius: 5px; /* Rounded corners for links */
         }
 
         nav a:hover {
@@ -72,7 +75,7 @@
         .search-input {
             padding: 12px 20px;
             font-size: 1rem;
-            border-radius: 5px;
+            border-radius: 5px; /* Rounded corners for search input */
             border: 2px solid #fff;
             width: 280px;
             transition: border-color 0.3s;
@@ -97,7 +100,7 @@
             padding: 15px;
             font-size: 1.2rem;
             color: white;
-            border-radius: 10px;
+            border-radius: 10px; /* Rounded corners for buttons */
             cursor: pointer;
             transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
             width: 100%;
@@ -140,7 +143,7 @@
     </div>
 
     <div class="button-container" id="buttonContainer">
-        <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+           <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -412,3 +415,5 @@
 
 </body>
 </html>
+
+

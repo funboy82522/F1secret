@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Website</title>
+    <title>Games Website with Rocking Buttons</title>
+    <link href='https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap' rel='stylesheet'>
     <style>
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Default font for body */
             text-align: center;
             color: white;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
             background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
             position: relative;
         }
@@ -70,6 +71,7 @@
         h1 {
             margin-top: 20px;
             font-size: 2.5rem;
+            font-family: 'Press Start 2P', cursive; /* Fun font for the heading */
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
 
@@ -112,45 +114,36 @@
         }
 
         .game-button {
+            position: relative;
             background: linear-gradient(90deg, #FF416C, #FF4B2B); /* Gradient background */
             border: none;
             padding: 15px;
             font-size: 1.1rem;
-            color: #fff; /* White text for contrast */
+            color: #fff;
             border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
-            text-align: center; /* Center the text */
-            position: relative; 
-            overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
-            width: 100%; /* Full width to match the container */
+            overflow: hidden; /* Hide overflow for the sparkle */
+            text-align: center; /* Center the text */
+            width: 100%;
+            transition: background 0.3s; /* Smooth transition for background change */
         }
 
         .game-button:hover {
-            transform: translateY(-2px);
             background: linear-gradient(90deg, #FF4B2B, #FF416C); /* Reverse gradient on hover */
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+            animation: rock 0.5s infinite; /* Looping rocking animation on hover */
+        }
+
+        @keyframes rock {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
         }
 
         .game-button:active {
             transform: scale(0.98);
-        }
-
-        .game-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.2);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .game-button:hover::after {
-            opacity: 1; 
         }
 
         @media (max-width: 600px) {
@@ -169,6 +162,7 @@
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="movies.html">Movies</a>
@@ -186,7 +180,7 @@
 
         <div class="button-background"> <!-- This creates the transparent box behind the buttons -->
             <div class="button-container" id="buttonContainer">
-                  <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+              <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -459,3 +453,5 @@
     </script>
 </body>
 </html>
+
+

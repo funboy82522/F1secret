@@ -123,7 +123,6 @@
             border-radius: 10px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
-            overflow: hidden; /* Hide overflow for the sparkle */
             text-align: center; /* Center the text */
             width: 100%;
             transition: background 0.3s; /* Smooth transition for background change */
@@ -131,14 +130,16 @@
 
         .game-button:hover {
             background: linear-gradient(90deg, #FF4B2B, #FF416C); /* Reverse gradient on hover */
-            animation: rock 0.5s infinite; /* Looping rocking animation on hover */
+            animation: rock 1s infinite; /* Slower and longer rocking animation on hover */
         }
 
         @keyframes rock {
             0% { transform: rotate(0deg); }
-            25% { transform: rotate(5deg); }
-            50% { transform: rotate(-5deg); }
-            75% { transform: rotate(5deg); }
+            16.67% { transform: rotate(5deg); }
+            33.33% { transform: rotate(-3deg); }
+            50% { transform: rotate(2deg); }
+            66.67% { transform: rotate(-1deg); }
+            83.33% { transform: rotate(3deg); }
             100% { transform: rotate(0deg); }
         }
 
@@ -180,7 +181,7 @@
 
         <div class="button-background"> <!-- This creates the transparent box behind the buttons -->
             <div class="button-container" id="buttonContainer">
-              <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+                <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
@@ -453,5 +454,3 @@
     </script>
 </body>
 </html>
-
-

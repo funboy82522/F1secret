@@ -62,7 +62,7 @@
         }
 
         .container {
-            max-width: 1200px; /* Maximum width of the container */
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
@@ -99,29 +99,30 @@
         .button-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            gap: 30px; /* Increased space between buttons */
+            gap: 30px;
             margin: 20px 0;
             padding: 0 10px;
         }
 
         .game-button {
-            background: #3a3a3a;
+            background: #ffcc00; /* Bright yellow color for a vibrant look */
             border: none;
             padding: 15px;
             font-size: 1.1rem;
-            color: white;
+            color: #333; /* Darker text for better contrast */
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
-            text-align: left;
-            position: relative; /* For after pseudo-element */
+            text-align: center; /* Center the text */
+            position: relative; 
             overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
         }
 
         .game-button:hover {
             transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: #ffbb00; /* Darken on hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
 
         .game-button:active {
@@ -135,13 +136,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.15); /* Subtle overlay effect on hover */
+            background: rgba(255, 255, 255, 0.2);
             opacity: 0;
             transition: opacity 0.3s;
         }
 
         .game-button:hover::after {
-            opacity: 1; /* Show overlay on hover */
+            opacity: 1; 
         }
 
         @media (max-width: 600px) {
@@ -172,7 +173,7 @@
         </div>
 
         <div class="button-container" id="buttonContainer">
-              <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
+             <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/the-impossible-quiz.html')">The Impossible Quiz</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/flash/age-of-war.html')">Age of War</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/papas/')">Papas Games</button>
         <button class="game-button" onclick="openGame('https://ad-freegames.github.io/snacks/minesweeper.html')">Minesweeper</button>
